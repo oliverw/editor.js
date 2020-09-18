@@ -582,6 +582,10 @@ export default class BlockManager extends Module {
    * @returns {Block}
    */
   public getBlockByChildNode(childNode: Node): Block {
+    if(!childNode) {
+      return undefined;
+    }
+
     /**
      * If node is Text TextNode
      */

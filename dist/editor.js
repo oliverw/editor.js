@@ -18482,9 +18482,14 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_
     }, {
       key: "getBlockByChildNode",
       value: function getBlockByChildNode(childNode) {
+        if (!childNode) {
+          return undefined;
+        }
         /**
          * If node is Text TextNode
          */
+
+
         if (!_dom["default"].isElement(childNode)) {
           childNode = childNode.parentNode;
         }
